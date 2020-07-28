@@ -47,3 +47,16 @@ Temporary Items
 .apdisk
 
 .gradle/
+
+# Chapter 03
+Chapter03/ch3_part1/.classpath
+Chapter03/ch3_part1/.project
+Chapter03/ch3_part1/.settings/
+Chapter03/ch3_part1/bin/
+Chapter03/ch3_part1/upload-dir/
+Chapter03/ch3_part2/.classpath
+Chapter03/ch3_part2/.project
+Chapter03/ch3_part2/.settings/
+Chapter03/ch3_part2/bin/
+Chapter03/ch3_part2/upload-dir/
+
