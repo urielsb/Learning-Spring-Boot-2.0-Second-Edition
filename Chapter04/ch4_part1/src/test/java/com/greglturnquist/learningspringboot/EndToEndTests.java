@@ -51,6 +51,8 @@ public class EndToEndTests {
 	// end::1[]
 
 	// tag::2[]
+	private static final String TEST_RESULTS_DIR = "test-results";
+	
 	static ChromeDriverService service;
 
 	static ChromeDriver driver;
@@ -63,10 +65,10 @@ public class EndToEndTests {
 	@BeforeClass
 	public static void setUp() throws IOException {
 		System.setProperty("webdriver.chrome.driver",
-			"ext/chromedriver");
+			"D:\\dev\\lib\\chromedriver_win32\\chromedriver.exe");
 		service = createDefaultService();
 		driver = new ChromeDriver(service);
-		Path testResults = Paths.get("build", "test-results");
+		Path testResults = Paths.get(TEST_RESULTS_DIR);
 		if (!Files.exists(testResults)) {
 			Files.createDirectory(testResults);
 		}
@@ -108,7 +110,7 @@ public class EndToEndTests {
 	private void takeScreenshot(String name) throws IOException {
 		FileCopyUtils.copy(
 			driver.getScreenshotAs(OutputType.FILE),
-			new File("build/test-results/TEST-" + name + ".png"));
+			new File(TEST_RESULTS_DIR + "/TEST-" + name + ".png"));
 	}
 	// end::5[]
 }
